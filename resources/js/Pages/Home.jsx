@@ -6,13 +6,13 @@ import Exhibition from '../Components/Landing/Exhibition';
 
 import Landing from '@/Layouts/LandingLayout';
 import ContactSection from '@/Components/Landing/Contact';
-const Home = ({items}) => {
+const Home = ({items,categories}) => {
   return (
     <>
 
         <Hero />
         <Intro/>
-        <Portfolio/>
+        <Portfolio categories={categories.data}/>
         <ContactSection/>
         <Exhibition exhibtion={items.data}  />
         {/* this will be testimonials */}

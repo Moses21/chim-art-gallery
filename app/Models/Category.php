@@ -13,10 +13,21 @@ class Category extends Model implements HasMedia
     use InteractsWithMedia;
 
     protected $fillable = ['name', 'description'];
+    // protected $appends = ['avatar'];
 
     public function items()
     {
         return $this->hasMany(Items::class);
     }
+
+
+
+    public function getAvatarAttribute()
+    {
+        return $this->getFirstMediaUrl('category');
+    }
+
+
+
 
 }
