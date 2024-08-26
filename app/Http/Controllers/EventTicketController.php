@@ -1,66 +1,55 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\EventTicket;
-use App\Http\Requests\StoreEventTicketRequest;
-use App\Http\Requests\UpdateEventTicketRequest;
+use App\Http\Resources\EventTicketResource;
+use Illuminate\Http\Request;
 
 class EventTicketController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    // List all tickets for an event
+    public function index($eventId)
     {
-        //
+        $tickets = EventTicket::where('event_id', $eventId)->get();
+        return EventTicketResource::collection($tickets);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    // Show a specific ticket
+    public function show($id)
     {
-        //
+        $ticket = EventTicket::findOrFail($id);
+        return new EventTicketResource($ticket);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreEventTicketRequest $request)
+    // Store a new ticket
+    public function store(Request $request)
     {
-        //
+        $ticket = EventTicket::create([
+            'event_id' => $request->event_id,
+            'ticket_type_id' => $request->ticket_type_id,
+            'user_id' => $request->user_id,
+            'price' => $request->price,
+            'status' => $request->status ?? 'pending',
+        ]);
+
+        return new EventTicketResource($ticket);
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(EventTicket $eventTicket)
+    // Update an existing ticket
+    public function update(Request $request, $id)
     {
-        //
+        $ticket = EventTicket::findOrFail($id);
+        $ticket->update($request->only('price', 'status'));
+
+        return new EventTicketResource($ticket);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(EventTicket $eventTicket)
+    // Delete a ticket
+    public function destroy($id)
     {
-        //
-    }
+        $ticket = EventTicket::findOrFail($id);
+        $ticket->delete();
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateEventTicketRequest $request, EventTicket $eventTicket)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(EventTicket $eventTicket)
-    {
-        //
+        return response()->json(['message' => 'Ticket deleted successfully']);
     }
 }
