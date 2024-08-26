@@ -1,66 +1,69 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use App\Models\Event;
-use App\Http\Requests\StoreEventRequest;
-use App\Http\Requests\UpdateEventRequest;
+use App\Http\Resources\EventResource;
+use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    // Show details of a specific event
+    public function show($id)
+    {
+        $event = Event::with('ticketTypes')->findOrFail($id);
+        return new EventResource($event);
+    }
+
+    // List all events
     public function index()
     {
-        //
+        $events = Event::with('ticketTypes')->paginate(10); // Pagination can be adjusted
+        return EventResource::collection($events);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    // Store a new event
+    public function store(Request $request)
     {
-        //
+        $event = Event::create($request->only('name', 'description', 'date', 'location'));
+
+        // Attach ticket types with prices and benefits
+        foreach ($request->ticket_types as $ticketType) {
+            $event->ticketTypes()->attach($ticketType['id'], [
+                'price' => $ticketType['price'],
+                'benefits' => $ticketType['benefits'],
+            ]);
+        }
+
+        return new EventResource($event->load('ticketTypes'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreEventRequest $request)
+    // Update an existing event
+    public function update(Request $request, $id)
     {
-        //
+        $event = Event::findOrFail($id);
+        $event->update($request->only('name', 'description', 'date', 'location'));
+
+        // Sync ticket types with prices and benefits
+        $syncData = [];
+        foreach ($request->ticket_types as $ticketType) {
+            $syncData[$ticketType['id']] = [
+                'price' => $ticketType['price'],
+                'benefits' => $ticketType['benefits'],
+            ];
+        }
+        $event->ticketTypes()->sync($syncData);
+
+        return new EventResource($event->load('ticketTypes'));
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Event $event)
+    // Delete an event
+    public function destroy($id)
     {
-        //
-    }
+        $event = Event::findOrFail($id);
+        $event->delete();
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Event $event)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateEventRequest $request, Event $event)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Event $event)
-    {
-        //
+        return response()->json(['message' => 'Event deleted successfully']);
     }
 }

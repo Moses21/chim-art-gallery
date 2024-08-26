@@ -2,6 +2,11 @@
 
 use App\Http\Controllers\PaymentsController;
 use App\Http\Controllers\ProfileController;
+
+
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\TicketTypeController;
+
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,6 +29,10 @@ Route::get('/dashboard', function () {
 
 
 
+Route::get('events', [EventController::class, 'index'])->name('events.index');
+Route::get('events/{id}', [EventController::class, 'show'])->name('events.show');
+
+
 Route::middleware('auth')->group(function () {
 
     //  payment routes
@@ -40,6 +49,19 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+
+    // ticket  routes
+    Route::post('events', [EventController::class, 'store'])->name('events.store');
+    Route::put('events/{id}', [EventController::class, 'update'])->name('events.update');
+    Route::delete('events/{id}', [EventController::class, 'destroy'])->name('events.destroy');
+
+    Route::get('ticket-types', [TicketTypeController::class, 'index'])->name('ticket-types.index');
+    Route::get('ticket-types/{id}', [TicketTypeController::class, 'show'])->name('ticket-types.show');
+    Route::post('ticket-types', [TicketTypeController::class, 'store'])->name('ticket-types.store');
+    Route::put('ticket-types/{id}', [TicketTypeController::class, 'update'])->name('ticket-types.update');
+    Route::delete('ticket-types/{id}', [TicketTypeController::class, 'destroy'])->name('ticket-types.destroy');
+
 });
 
 require __DIR__.'/auth.php';

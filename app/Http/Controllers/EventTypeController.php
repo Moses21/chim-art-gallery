@@ -2,65 +2,45 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\EventType;
-use App\Http\Requests\StoreEventTypeRequest;
-use App\Http\Requests\UpdateEventTypeRequest;
+use App\Models\TicketType;
+use Illuminate\Http\Request;
 
-class EventTypeController extends Controller
+class TicketTypeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    // List all ticket types
     public function index()
     {
-        //
+        return TicketType::all();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    // Show a specific ticket type
+    public function show($id)
     {
-        //
+        $ticketType = TicketType::findOrFail($id);
+        return $ticketType;
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreEventTypeRequest $request)
+    // Store a new ticket type
+    public function store(Request $request)
     {
-        //
+        $ticketType = TicketType::create($request->only('name', 'description'));
+        return $ticketType;
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(EventType $eventType)
+    // Update an existing ticket type
+    public function update(Request $request, $id)
     {
-        //
+        $ticketType = TicketType::findOrFail($id);
+        $ticketType->update($request->only('name', 'description'));
+        return $ticketType;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(EventType $eventType)
+    // Delete a ticket type
+    public function destroy($id)
     {
-        //
-    }
+        $ticketType = TicketType::findOrFail($id);
+        $ticketType->delete();
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateEventTypeRequest $request, EventType $eventType)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(EventType $eventType)
-    {
-        //
+        return response()->json(['message' => 'Ticket Type deleted successfully']);
     }
 }
