@@ -2,7 +2,7 @@ import React from 'react'
 
 const Portfolio = ({categories}) => {
   return (
-    <section className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <section className="px-4 mx-auto max-w-7xl min-h-[100vh] sm:px-6 lg:px-8">
       <div className="mb-8 rounded-lg padding-t md:mb-12 md:grid-cols-3">
         <div className="">
           <h3 className="my-3 text-[18px] text-gray-500 font-montserrat uppercase text-center">my works</h3>
