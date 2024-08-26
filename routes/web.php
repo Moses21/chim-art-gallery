@@ -7,9 +7,16 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\TicketTypeController;
 
+use App\Http\Controllers\EventTicketController;
+use Faker\Guesser\Name;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+
+
+
+
+
 
 Route::get('/',[App\Http\Controllers\HomeController::class, 'index'] )->name('home');
 
@@ -51,7 +58,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 
-    // ticket  routes
+    // Events  routes
     Route::post('events', [EventController::class, 'store'])->name('events.store');
     Route::put('events/{id}', [EventController::class, 'update'])->name('events.update');
     Route::delete('events/{id}', [EventController::class, 'destroy'])->name('events.destroy');
@@ -61,6 +68,15 @@ Route::middleware('auth')->group(function () {
     Route::post('ticket-types', [TicketTypeController::class, 'store'])->name('ticket-types.store');
     Route::put('ticket-types/{id}', [TicketTypeController::class, 'update'])->name('ticket-types.update');
     Route::delete('ticket-types/{id}', [TicketTypeController::class, 'destroy'])->name('ticket-types.destroy');
+
+    // tickects routes
+
+    Route::get('events/{eventId}/tickets', [EventTicketController::class, 'index'])->name('tickets.index');
+    Route::get('tickets/{id}', [EventTicketController::class, 'show'])->name('tickets.show');
+    Route::post('tickets', [EventTicketController::class, 'store'])->name('tickets.store');
+    Route::put('tickets/{id}', [EventTicketController::class, 'update'])->name('tickets.update');
+    Route::delete('tickets/{id}', [EventTicketController::class, 'destroy'])->name('tickets.destroy');
+
 
 });
 
