@@ -102,7 +102,8 @@ class EventController extends Controller
      * Delete an event
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     *  @response { "message": "Event deleted successfully"}
+     *
      */
     public function destroy($id)
     {
