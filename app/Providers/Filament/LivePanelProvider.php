@@ -21,6 +21,7 @@ use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Althinect\FilamentSpatieRolesPermissions\FilamentSpatieRolesPermissionsPlugin;
+use App\Filament\Widgets\LatestTickets;
 
 class LivePanelProvider extends PanelProvider
 {
@@ -47,6 +48,7 @@ class LivePanelProvider extends PanelProvider
             ->widgets([
                  Widgets\StatsOverviewWidget::class,
                 RegisteredUsersPerMonth::class,
+                // LatestTickets::class,
                 // Widgets\ActivityWidget::class,
                 // Widgets\AccountWidget::class,
                 // Widgets\ProfileInformationWidget::class,

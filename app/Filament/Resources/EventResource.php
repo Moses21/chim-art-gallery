@@ -33,7 +33,7 @@ class EventResource extends Resource
                 Forms\Components\TextInput::make('location')
                     ->required()
                     ->maxLength(255),
-                FileUpload::make('poster')
+                Forms\Components\FileUpload::make('poster')
                     ->label('Event Poster')
                     ->image()
                     ->required()
