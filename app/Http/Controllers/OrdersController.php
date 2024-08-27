@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Orders;
 use Illuminate\Http\Request;
 
+/**
+ * @group Orders
+ * @package App\Http\Controllers
+*/
+
 class OrdersController extends Controller
 {
     /**

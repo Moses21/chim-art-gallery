@@ -6,6 +6,10 @@ use App\Models\Items;
 use Illuminate\Http\Request;
 use App\Http\Resources\ItemCollection;
 
+/**  @group Gallery
+ * @package App\Http\Controllers
+*/
+
 class GalleryController extends Controller
 {
 

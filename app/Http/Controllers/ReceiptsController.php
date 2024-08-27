@@ -5,6 +5,12 @@ namespace App\Http\Controllers;
 use App\Models\Receipts;
 use Illuminate\Http\Request;
 
+
+/**
+ * @group Receipts
+ * @package App\Http\Controllers
+ */
+
 class ReceiptsController extends Controller
 {
     /**

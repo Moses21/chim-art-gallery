@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Resources\ItemCollection;
 use App\Models\Category;
 
+/**
+ * @group Home
+ * @package App\Http\Controllers
+ */
+
 class HomeController extends Controller
 {
 

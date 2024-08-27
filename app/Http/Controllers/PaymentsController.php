@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
+
+/**
+ * @group Payments
+ * @package App\Http\Controllers
+ */
+
 class PaymentsController extends Controller
 {
     /**

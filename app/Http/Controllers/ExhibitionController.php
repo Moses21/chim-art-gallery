@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+/**
+ * @group Exhibition
+ * @package App\Http\Controllers
+*/
+
 class ExhibitionController extends Controller
 {
     /**

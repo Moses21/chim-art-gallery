@@ -6,10 +6,17 @@ use App\Http\Resources\ItemResource;
 use App\Models\Items;
 use Illuminate\Http\Request;
 
+/**
+ * @group Artworks and Creations Management
+ *
+ * API endpoints for managing artworks and creations (items).
+ */
 class ItemsController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the items.
+     *
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
@@ -17,26 +24,33 @@ class ItemsController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new item.
+     *
+     * @return \Illuminate\Http\Response
      */
     public function create()
     {
-
+        //
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created item in storage.
      *
-     * @param Request $request
-     * @return void
+     * @bodyParam name string required The name of the item. Example: "Sunset Painting"
+     * @bodyParam description string required A brief description of the item. Example: "A beautiful sunset landscape."
+     * @bodyParam price numeric required The price of the item. Example: 199.99
+     * @bodyParam category_id integer required The ID of the category the item belongs to. Example: 1
+     *
+     * @param Request $request The request object containing the item data.
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(Request $request)
     {
         // Validate the request
         $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'price' => 'required',
+            'name' => 'required|string|max:255',
+            'description' => 'required|string',
+            'price' => 'required|numeric|min:0',
             'category_id' => 'required|exists:categories,id'
         ]);
 
@@ -45,9 +59,11 @@ class ItemsController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified item.
      *
-     * @param Items $id The item to be displayed
+     * @urlParam id integer required The ID of the item to be displayed. Example: 1
+     *
+     * @param Items $id The item to be displayed.
      * @return \Inertia\Response
      */
     public function show(Items $id)
@@ -66,7 +82,12 @@ class ItemsController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified item.
+     *
+     * @urlParam id integer required The ID of the item to be edited. Example: 1
+     *
+     * @bodyParam Items $items The item to be edited.
+     * @return \Illuminate\Http\Response
      */
     public function edit(Items $items)
     {
@@ -74,22 +95,24 @@ class ItemsController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified item in storage.
      *
-     * Validate the request with the defined rules and update the item
-     * with the validated data.
+     * @bodyParam name string required The updated name of the item. Example: "Sunset Painting"
+     * @bodyParam description string required The updated description of the item. Example: "A beautiful sunset landscape."
+     * @bodyParam price numeric required The updated price of the item. Example: 199.99
+     * @bodyParam category_id integer required The updated ID of the category the item belongs to. Example: 1
      *
-     * @param Request $request The request with the updated data
-     * @param Items $items The item to be updated
-     * @return void
+     * @bodyParam Request $request The request object containing the updated data.
+     * @bodyParam Items $items The item to be updated.
+     * @return \Illuminate\Http\JsonResponse
      */
     public function update(Request $request, Items $items)
     {
         // Validate the request with the defined rules
         $request->validate([
-            'name' => 'required',
-            'description' => 'required',
-            'price' => 'required',
+            'name' => 'required|string|max:255',
+            'description' => 'required|string',
+            'price' => 'required|numeric|min:0',
             'category_id' => 'required|exists:categories,id'
         ]);
 
@@ -98,9 +121,11 @@ class ItemsController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified item from storage.
      *
-     * @param Items $items The item to be deleted
+     * @urlParam id integer required The ID of the item to be deleted. Example: 1
+     *
+     * @param Items $items The item to be deleted.
      * @return \Illuminate\Http\JsonResponse
      */
     public function destroy(Items $items)
@@ -111,8 +136,4 @@ class ItemsController extends Controller
         // Return a successful response message
         return response()->json(['message' => 'Item deleted successfully'], 204);
     }
-
-
-
-
 }

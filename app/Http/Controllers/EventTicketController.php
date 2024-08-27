@@ -5,6 +5,11 @@ use App\Models\EventTicket;
 use App\Http\Resources\EventTicketResource;
 use Illuminate\Http\Request;
 
+/**
+ * @group Event Tickets
+ * @package  App\Http\Controllers
+ */
+
 class EventTicketController extends Controller
 {
     /**

@@ -7,6 +7,12 @@ use App\Models\Event;
 use App\Http\Resources\EventResource;
 use Illuminate\Http\Request;
 
+/**
+ *
+ * @group Events
+ *@package App\Http\Controllers
+ *
+ */
 class EventController extends Controller
 {
     /**

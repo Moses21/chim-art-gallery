@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\TicketType;
 use Illuminate\Http\Request;
 
+/**
+ * @group Ticket Types
+ * @package App\Http\Controllers
+ */
+
 class TicketTypeController extends Controller
 {
     /**

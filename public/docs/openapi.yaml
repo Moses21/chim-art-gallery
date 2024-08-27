@@ -7,6 +7,40 @@ servers:
   -
     url: 'http://localhost:8000'
 paths:
+  '/api/my-work/{id_id}':
+    get:
+      summary: 'Display the specified item.'
+      operationId: displayTheSpecifiedItem
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        \n\n        <title inertia>Chimwemwe-Luwanda</title>\n\n        <!-- Fonts -->\n        <link rel=\"preconnect\" href=\"https://fonts.bunny.net\">\n        <link href=\"https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap\" rel=\"stylesheet\" />\n\n        <!-- Scripts -->\n        <script type=\"text/javascript\">Object.assign(Ziggy.routes,{\"filament.exports.download\":{\"uri\":\"filament\\/exports\\/{export}\\/download\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"export\"],\"bindings\":{\"export\":\"id\"}},\"filament.imports.failed-rows.download\":{\"uri\":\"filament\\/imports\\/{import}\\/failed-rows\\/download\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"import\"],\"bindings\":{\"import\":\"id\"}},\"filament.live.auth.login\":{\"uri\":\"live\\/login\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.auth.logout\":{\"uri\":\"live\\/logout\",\"methods\":[\"POST\"]},\"filament.live.auth.profile\":{\"uri\":\"live\\/profile\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.pages.dashboard\":{\"uri\":\"live\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.index\":{\"uri\":\"live\\/permissions\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.create\":{\"uri\":\"live\\/permissions\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.edit\":{\"uri\":\"live\\/permissions\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.permissions.view\":{\"uri\":\"live\\/permissions\\/{record}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.roles.index\":{\"uri\":\"live\\/roles\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.roles.create\":{\"uri\":\"live\\/roles\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.roles.edit\":{\"uri\":\"live\\/roles\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.roles.view\":{\"uri\":\"live\\/roles\\/{record}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.categories.index\":{\"uri\":\"live\\/categories\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.categories.create\":{\"uri\":\"live\\/categories\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.categories.edit\":{\"uri\":\"live\\/categories\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.events.index\":{\"uri\":\"live\\/events\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.events.create\":{\"uri\":\"live\\/events\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.events.edit\":{\"uri\":\"live\\/events\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.event-tickets.index\":{\"uri\":\"live\\/event-tickets\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.event-tickets.create\":{\"uri\":\"live\\/event-tickets\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.event-tickets.edit\":{\"uri\":\"live\\/event-tickets\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.items.index\":{\"uri\":\"live\\/items\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.items.create\":{\"uri\":\"live\\/items\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.items.edit\":{\"uri\":\"live\\/items\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.ticket-types.index\":{\"uri\":\"live\\/ticket-types\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.ticket-types.create\":{\"uri\":\"live\\/ticket-types\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.ticket-types.edit\":{\"uri\":\"live\\/ticket-types\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.users.index\":{\"uri\":\"live\\/users\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.users.create\":{\"uri\":\"live\\/users\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.users.edit\":{\"uri\":\"live\\/users\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"sanctum.csrf-cookie\":{\"uri\":\"sanctum\\/csrf-cookie\",\"methods\":[\"GET\",\"HEAD\"]},\"livewire.update\":{\"uri\":\"livewire\\/update\",\"methods\":[\"POST\"]},\"livewire.upload-file\":{\"uri\":\"livewire\\/upload-file\",\"methods\":[\"POST\"]},\"livewire.preview-file\":{\"uri\":\"livewire\\/preview-file\\/{filename}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"filename\"]},\"home\":{\"uri\":\"\\/\",\"methods\":[\"GET\",\"HEAD\"]},\"about\":{\"uri\":\"about\",\"methods\":[\"GET\",\"HEAD\"]},\"gallery.index\":{\"uri\":\"gallery\",\"methods\":[\"GET\",\"HEAD\"]},\"exhibition.index\":{\"uri\":\"exhibition\",\"methods\":[\"GET\",\"HEAD\"]},\"items.show\":{\"uri\":\"my-work\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"],\"bindings\":{\"id\":\"id\"}},\"dashboard\":{\"uri\":\"dashboard\",\"methods\":[\"GET\",\"HEAD\"]},\"events.index\":{\"uri\":\"events\",\"methods\":[\"GET\",\"HEAD\"]},\"events.show\":{\"uri\":\"events\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"changu-webhook\":{\"uri\":\"changu-webhook\",\"methods\":[\"GET\",\"HEAD\"]},\"changu.callback\":{\"uri\":\"changu-callback\",\"methods\":[\"GET\",\"HEAD\"]},\"wishlist.store\":{\"uri\":\"wishlist\",\"methods\":[\"POST\"]},\"profile.edit\":{\"uri\":\"profile\",\"methods\":[\"GET\",\"HEAD\"]},\"profile.update\":{\"uri\":\"profile\",\"methods\":[\"PATCH\"]},\"profile.destroy\":{\"uri\":\"profile\",\"methods\":[\"DELETE\"]},\"events.store\":{\"uri\":\"events\",\"methods\":[\"POST\"]},\"events.update\":{\"uri\":\"events\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"events.destroy\":{\"uri\":\"events\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"ticket-types.index\":{\"uri\":\"ticket-types\",\"methods\":[\"GET\",\"HEAD\"]},\"ticket-types.show\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"ticket-types.store\":{\"uri\":\"ticket-types\",\"methods\":[\"POST\"]},\"ticket-types.update\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"ticket-types.destroy\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"tickets.index\":{\"uri\":\"events\\/{eventId}\\/tickets\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"eventId\"]},\"tickets.show\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"tickets.store\":{\"uri\":\"tickets\",\"methods\":[\"POST\"]},\"tickets.update\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"tickets.destroy\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"register\":{\"uri\":\"register\",\"methods\":[\"GET\",\"HEAD\"]},\"login\":{\"uri\":\"login\",\"methods\":[\"GET\",\"HEAD\"]},\"password.request\":{\"uri\":\"forgot-password\",\"methods\":[\"GET\",\"HEAD\"]},\"password.email\":{\"uri\":\"forgot-password\",\"methods\":[\"POST\"]},\"password.reset\":{\"uri\":\"reset-password\\/{token}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"token\"]},\"password.store\":{\"uri\":\"reset-password\",\"methods\":[\"POST\"]},\"verification.notice\":{\"uri\":\"verify-email\",\"methods\":[\"GET\",\"HEAD\"]},\"verification.verify\":{\"uri\":\"verify-email\\/{id}\\/{hash}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\",\"hash\"]},\"verification.send\":{\"uri\":\"email\\/verification-notification\",\"methods\":[\"POST\"]},\"password.confirm\":{\"uri\":\"confirm-password\",\"methods\":[\"GET\",\"HEAD\"]},\"password.update\":{\"uri\":\"password\",\"methods\":[\"PUT\"]},\"logout\":{\"uri\":\"logout\",\"methods\":[\"POST\"]}});</script>        <script type=\"module\" >\n    import RefreshRuntime from 'http://[::1]:5173/@react-refresh'\n    RefreshRuntime.injectIntoGlobalHook(window)\n    window.$RefreshReg$ = () => {}\n    window.$RefreshSig$ = () => (type) => type\n    window.__vite_plugin_react_preamble_installed__ = true\n</script>        <script type=\"module\" src=\"http://[::1]:5173/@vite/client\" data-navigate-track=\"reload\"></script><script type=\"module\" src=\"http://[::1]:5173/resources/js/app.jsx\" data-navigate-track=\"reload\"></script><script type=\"module\" src=\"http://[::1]:5173/resources/js/Pages/Items/show/Items.jsx\" data-navigate-track=\"reload\"></script>            </head>\n    <body class=\"font-sans antialiased\">\n        <div id=\"app\" data-page=\"{&quot;component&quot;:&quot;Items\\/show\\/Items&quot;,&quot;props&quot;:{&quot;id&quot;:{&quot;data&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;Saulos Chilima&quot;,&quot;description&quot;:&quot;&lt;p&gt;&lt;strong&gt;Claus Saulos Chilima&lt;\\/strong&gt; was a prominent Malawian politician and economist born on &lt;em style=\\&quot;text-decoration: underline;\\&quot;&gt;February 12, 1973.&lt;\\/em&gt; He has served as the Vice President of Malawi since June 2014 till mid 2024&lt;\\/p&gt;&quot;,&quot;clean_description&quot;:&quot;Claus Saulos Chilima was a prominent Malawian politician and economist born on February 12, 1973. He has served as the Vice President of Malawi since June 2014 till mid 2024&quot;,&quot;price&quot;:&quot;MWK 100.00&quot;,&quot;pretty_price&quot;:&quot;100&quot;,&quot;created_at&quot;:&quot;3 weeks ago&quot;,&quot;dimensions&quot;:&quot;5 X 5 Inches&quot;,&quot;avatar&quot;:&quot;http:\\/\\/localhost:8000\\/storage\\/1\\/01J43DH3S4W2V2JBVYJCWWMEVH.jpg&quot;,&quot;category&quot;:&quot;Pencil Sketches&quot;}},&quot;pub_key&quot;:null,&quot;return_url&quot;:&quot;http:\\/\\/localhost:8000&quot;},&quot;url&quot;:&quot;\\/api\\/my-work\\/1&quot;,&quot;version&quot;:&quot;&quot;}\"></div>    </body>\n</html>\n"
+      tags:
+        - 'Artworks and Creations Management'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id_id
+        description: 'The ID of the id.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+      -
+        in: path
+        name: id
+        description: 'The ID of the item to be displayed.'
+        example: 1
+        required: true
+        schema:
+          type: integer
   /api/about:
     get:
       summary: ''
@@ -24,66 +58,6 @@ paths:
       tags:
         - Endpoints
       security: []
-  /api/gallery:
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        \n\n        <title inertia>Chimwemwe-Luwanda</title>\n\n        <!-- Fonts -->\n        <link rel=\"preconnect\" href=\"https://fonts.bunny.net\">\n        <link href=\"https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap\" rel=\"stylesheet\" />\n\n        <!-- Scripts -->\n        <script type=\"text/javascript\">Object.assign(Ziggy.routes,{\"filament.exports.download\":{\"uri\":\"filament\\/exports\\/{export}\\/download\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"export\"],\"bindings\":{\"export\":\"id\"}},\"filament.imports.failed-rows.download\":{\"uri\":\"filament\\/imports\\/{import}\\/failed-rows\\/download\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"import\"],\"bindings\":{\"import\":\"id\"}},\"filament.live.auth.login\":{\"uri\":\"live\\/login\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.auth.logout\":{\"uri\":\"live\\/logout\",\"methods\":[\"POST\"]},\"filament.live.auth.profile\":{\"uri\":\"live\\/profile\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.pages.dashboard\":{\"uri\":\"live\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.index\":{\"uri\":\"live\\/permissions\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.create\":{\"uri\":\"live\\/permissions\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.edit\":{\"uri\":\"live\\/permissions\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.permissions.view\":{\"uri\":\"live\\/permissions\\/{record}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.roles.index\":{\"uri\":\"live\\/roles\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.roles.create\":{\"uri\":\"live\\/roles\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.roles.edit\":{\"uri\":\"live\\/roles\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.roles.view\":{\"uri\":\"live\\/roles\\/{record}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.categories.index\":{\"uri\":\"live\\/categories\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.categories.create\":{\"uri\":\"live\\/categories\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.categories.edit\":{\"uri\":\"live\\/categories\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.events.index\":{\"uri\":\"live\\/events\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.events.create\":{\"uri\":\"live\\/events\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.events.edit\":{\"uri\":\"live\\/events\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.event-tickets.index\":{\"uri\":\"live\\/event-tickets\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.event-tickets.create\":{\"uri\":\"live\\/event-tickets\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.event-tickets.edit\":{\"uri\":\"live\\/event-tickets\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.items.index\":{\"uri\":\"live\\/items\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.items.create\":{\"uri\":\"live\\/items\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.items.edit\":{\"uri\":\"live\\/items\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.ticket-types.index\":{\"uri\":\"live\\/ticket-types\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.ticket-types.create\":{\"uri\":\"live\\/ticket-types\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.ticket-types.edit\":{\"uri\":\"live\\/ticket-types\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.users.index\":{\"uri\":\"live\\/users\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.users.create\":{\"uri\":\"live\\/users\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.users.edit\":{\"uri\":\"live\\/users\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"sanctum.csrf-cookie\":{\"uri\":\"sanctum\\/csrf-cookie\",\"methods\":[\"GET\",\"HEAD\"]},\"livewire.update\":{\"uri\":\"livewire\\/update\",\"methods\":[\"POST\"]},\"livewire.upload-file\":{\"uri\":\"livewire\\/upload-file\",\"methods\":[\"POST\"]},\"livewire.preview-file\":{\"uri\":\"livewire\\/preview-file\\/{filename}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"filename\"]},\"home\":{\"uri\":\"\\/\",\"methods\":[\"GET\",\"HEAD\"]},\"about\":{\"uri\":\"about\",\"methods\":[\"GET\",\"HEAD\"]},\"gallery.index\":{\"uri\":\"gallery\",\"methods\":[\"GET\",\"HEAD\"]},\"exhibition.index\":{\"uri\":\"exhibition\",\"methods\":[\"GET\",\"HEAD\"]},\"items.show\":{\"uri\":\"my-work\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"],\"bindings\":{\"id\":\"id\"}},\"dashboard\":{\"uri\":\"dashboard\",\"methods\":[\"GET\",\"HEAD\"]},\"events.index\":{\"uri\":\"events\",\"methods\":[\"GET\",\"HEAD\"]},\"events.show\":{\"uri\":\"events\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"changu-webhook\":{\"uri\":\"changu-webhook\",\"methods\":[\"GET\",\"HEAD\"]},\"changu.callback\":{\"uri\":\"changu-callback\",\"methods\":[\"GET\",\"HEAD\"]},\"wishlist.store\":{\"uri\":\"wishlist\",\"methods\":[\"POST\"]},\"profile.edit\":{\"uri\":\"profile\",\"methods\":[\"GET\",\"HEAD\"]},\"profile.update\":{\"uri\":\"profile\",\"methods\":[\"PATCH\"]},\"profile.destroy\":{\"uri\":\"profile\",\"methods\":[\"DELETE\"]},\"events.store\":{\"uri\":\"events\",\"methods\":[\"POST\"]},\"events.update\":{\"uri\":\"events\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"events.destroy\":{\"uri\":\"events\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"ticket-types.index\":{\"uri\":\"ticket-types\",\"methods\":[\"GET\",\"HEAD\"]},\"ticket-types.show\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"ticket-types.store\":{\"uri\":\"ticket-types\",\"methods\":[\"POST\"]},\"ticket-types.update\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"ticket-types.destroy\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"tickets.index\":{\"uri\":\"events\\/{eventId}\\/tickets\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"eventId\"]},\"tickets.show\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"tickets.store\":{\"uri\":\"tickets\",\"methods\":[\"POST\"]},\"tickets.update\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"tickets.destroy\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"register\":{\"uri\":\"register\",\"methods\":[\"GET\",\"HEAD\"]},\"login\":{\"uri\":\"login\",\"methods\":[\"GET\",\"HEAD\"]},\"password.request\":{\"uri\":\"forgot-password\",\"methods\":[\"GET\",\"HEAD\"]},\"password.email\":{\"uri\":\"forgot-password\",\"methods\":[\"POST\"]},\"password.reset\":{\"uri\":\"reset-password\\/{token}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"token\"]},\"password.store\":{\"uri\":\"reset-password\",\"methods\":[\"POST\"]},\"verification.notice\":{\"uri\":\"verify-email\",\"methods\":[\"GET\",\"HEAD\"]},\"verification.verify\":{\"uri\":\"verify-email\\/{id}\\/{hash}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\",\"hash\"]},\"verification.send\":{\"uri\":\"email\\/verification-notification\",\"methods\":[\"POST\"]},\"password.confirm\":{\"uri\":\"confirm-password\",\"methods\":[\"GET\",\"HEAD\"]},\"password.update\":{\"uri\":\"password\",\"methods\":[\"PUT\"]},\"logout\":{\"uri\":\"logout\",\"methods\":[\"POST\"]}});</script>        <script type=\"module\" >\n    import RefreshRuntime from 'http://[::1]:5173/@react-refresh'\n    RefreshRuntime.injectIntoGlobalHook(window)\n    window.$RefreshReg$ = () => {}\n    window.$RefreshSig$ = () => (type) => type\n    window.__vite_plugin_react_preamble_installed__ = true\n</script>        <script type=\"module\" src=\"http://[::1]:5173/@vite/client\" data-navigate-track=\"reload\"></script><script type=\"module\" src=\"http://[::1]:5173/resources/js/app.jsx\" data-navigate-track=\"reload\"></script><script type=\"module\" src=\"http://[::1]:5173/resources/js/Pages/Gallery.jsx\" data-navigate-track=\"reload\"></script>            </head>\n    <body class=\"font-sans antialiased\">\n        <div id=\"app\" data-page=\"{&quot;component&quot;:&quot;Gallery&quot;,&quot;props&quot;:{&quot;items&quot;:{&quot;data&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;Saulos Chilima&quot;,&quot;description&quot;:&quot;&lt;p&gt;&lt;strong&gt;Claus Saulos Chilima&lt;\\/strong&gt; was a prominent Malawian politician and economist born on &lt;em style=\\&quot;text-decoration: underline;\\&quot;&gt;February 12, 1973.&lt;\\/em&gt; He has served as the Vice President of Malawi since June 2014 till mid 2024&lt;\\/p&gt;&quot;,&quot;clean_description&quot;:&quot;Claus Saulos Chilima was a prominent Malawian politician and economist born on February 12, 1973. He has served as the Vice President of Malawi since June 2014 till mid 2024&quot;,&quot;price&quot;:&quot;MWK 100.00&quot;,&quot;pretty_price&quot;:&quot;100&quot;,&quot;created_at&quot;:&quot;3 weeks ago&quot;,&quot;dimensions&quot;:&quot;5 X 5 Inches&quot;,&quot;avatar&quot;:&quot;http:\\/\\/localhost:8000\\/storage\\/1\\/01J43DH3S4W2V2JBVYJCWWMEVH.jpg&quot;,&quot;category&quot;:&quot;Pencil Sketches&quot;}],&quot;links&quot;:{&quot;first&quot;:&quot;http:\\/\\/localhost:8000\\/api\\/gallery?page=1&quot;,&quot;last&quot;:&quot;http:\\/\\/localhost:8000\\/api\\/gallery?page=1&quot;,&quot;prev&quot;:null,&quot;next&quot;:null},&quot;meta&quot;:{&quot;current_page&quot;:1,&quot;from&quot;:1,&quot;last_page&quot;:1,&quot;links&quot;:[{&quot;url&quot;:null,&quot;label&quot;:&quot;&amp;laquo; Previous&quot;,&quot;active&quot;:false},{&quot;url&quot;:&quot;http:\\/\\/localhost:8000\\/api\\/gallery?page=1&quot;,&quot;label&quot;:&quot;1&quot;,&quot;active&quot;:true},{&quot;url&quot;:null,&quot;label&quot;:&quot;Next &amp;raquo;&quot;,&quot;active&quot;:false}],&quot;path&quot;:&quot;http:\\/\\/localhost:8000\\/api\\/gallery&quot;,&quot;per_page&quot;:20,&quot;to&quot;:1,&quot;total&quot;:1}}},&quot;url&quot;:&quot;\\/api\\/gallery&quot;,&quot;version&quot;:&quot;&quot;}\"></div>    </body>\n</html>\n"
-      tags:
-        - Endpoints
-      security: []
-  /api/exhibition:
-    get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        \n\n        <title inertia>Chimwemwe-Luwanda</title>\n\n        <!-- Fonts -->\n        <link rel=\"preconnect\" href=\"https://fonts.bunny.net\">\n        <link href=\"https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap\" rel=\"stylesheet\" />\n\n        <!-- Scripts -->\n        <script type=\"text/javascript\">Object.assign(Ziggy.routes,{\"filament.exports.download\":{\"uri\":\"filament\\/exports\\/{export}\\/download\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"export\"],\"bindings\":{\"export\":\"id\"}},\"filament.imports.failed-rows.download\":{\"uri\":\"filament\\/imports\\/{import}\\/failed-rows\\/download\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"import\"],\"bindings\":{\"import\":\"id\"}},\"filament.live.auth.login\":{\"uri\":\"live\\/login\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.auth.logout\":{\"uri\":\"live\\/logout\",\"methods\":[\"POST\"]},\"filament.live.auth.profile\":{\"uri\":\"live\\/profile\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.pages.dashboard\":{\"uri\":\"live\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.index\":{\"uri\":\"live\\/permissions\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.create\":{\"uri\":\"live\\/permissions\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.edit\":{\"uri\":\"live\\/permissions\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.permissions.view\":{\"uri\":\"live\\/permissions\\/{record}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.roles.index\":{\"uri\":\"live\\/roles\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.roles.create\":{\"uri\":\"live\\/roles\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.roles.edit\":{\"uri\":\"live\\/roles\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.roles.view\":{\"uri\":\"live\\/roles\\/{record}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.categories.index\":{\"uri\":\"live\\/categories\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.categories.create\":{\"uri\":\"live\\/categories\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.categories.edit\":{\"uri\":\"live\\/categories\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.events.index\":{\"uri\":\"live\\/events\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.events.create\":{\"uri\":\"live\\/events\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.events.edit\":{\"uri\":\"live\\/events\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.event-tickets.index\":{\"uri\":\"live\\/event-tickets\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.event-tickets.create\":{\"uri\":\"live\\/event-tickets\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.event-tickets.edit\":{\"uri\":\"live\\/event-tickets\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.items.index\":{\"uri\":\"live\\/items\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.items.create\":{\"uri\":\"live\\/items\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.items.edit\":{\"uri\":\"live\\/items\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.ticket-types.index\":{\"uri\":\"live\\/ticket-types\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.ticket-types.create\":{\"uri\":\"live\\/ticket-types\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.ticket-types.edit\":{\"uri\":\"live\\/ticket-types\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.users.index\":{\"uri\":\"live\\/users\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.users.create\":{\"uri\":\"live\\/users\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.users.edit\":{\"uri\":\"live\\/users\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"sanctum.csrf-cookie\":{\"uri\":\"sanctum\\/csrf-cookie\",\"methods\":[\"GET\",\"HEAD\"]},\"livewire.update\":{\"uri\":\"livewire\\/update\",\"methods\":[\"POST\"]},\"livewire.upload-file\":{\"uri\":\"livewire\\/upload-file\",\"methods\":[\"POST\"]},\"livewire.preview-file\":{\"uri\":\"livewire\\/preview-file\\/{filename}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"filename\"]},\"home\":{\"uri\":\"\\/\",\"methods\":[\"GET\",\"HEAD\"]},\"about\":{\"uri\":\"about\",\"methods\":[\"GET\",\"HEAD\"]},\"gallery.index\":{\"uri\":\"gallery\",\"methods\":[\"GET\",\"HEAD\"]},\"exhibition.index\":{\"uri\":\"exhibition\",\"methods\":[\"GET\",\"HEAD\"]},\"items.show\":{\"uri\":\"my-work\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"],\"bindings\":{\"id\":\"id\"}},\"dashboard\":{\"uri\":\"dashboard\",\"methods\":[\"GET\",\"HEAD\"]},\"events.index\":{\"uri\":\"events\",\"methods\":[\"GET\",\"HEAD\"]},\"events.show\":{\"uri\":\"events\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"changu-webhook\":{\"uri\":\"changu-webhook\",\"methods\":[\"GET\",\"HEAD\"]},\"changu.callback\":{\"uri\":\"changu-callback\",\"methods\":[\"GET\",\"HEAD\"]},\"wishlist.store\":{\"uri\":\"wishlist\",\"methods\":[\"POST\"]},\"profile.edit\":{\"uri\":\"profile\",\"methods\":[\"GET\",\"HEAD\"]},\"profile.update\":{\"uri\":\"profile\",\"methods\":[\"PATCH\"]},\"profile.destroy\":{\"uri\":\"profile\",\"methods\":[\"DELETE\"]},\"events.store\":{\"uri\":\"events\",\"methods\":[\"POST\"]},\"events.update\":{\"uri\":\"events\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"events.destroy\":{\"uri\":\"events\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"ticket-types.index\":{\"uri\":\"ticket-types\",\"methods\":[\"GET\",\"HEAD\"]},\"ticket-types.show\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"ticket-types.store\":{\"uri\":\"ticket-types\",\"methods\":[\"POST\"]},\"ticket-types.update\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"ticket-types.destroy\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"tickets.index\":{\"uri\":\"events\\/{eventId}\\/tickets\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"eventId\"]},\"tickets.show\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"tickets.store\":{\"uri\":\"tickets\",\"methods\":[\"POST\"]},\"tickets.update\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"tickets.destroy\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"register\":{\"uri\":\"register\",\"methods\":[\"GET\",\"HEAD\"]},\"login\":{\"uri\":\"login\",\"methods\":[\"GET\",\"HEAD\"]},\"password.request\":{\"uri\":\"forgot-password\",\"methods\":[\"GET\",\"HEAD\"]},\"password.email\":{\"uri\":\"forgot-password\",\"methods\":[\"POST\"]},\"password.reset\":{\"uri\":\"reset-password\\/{token}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"token\"]},\"password.store\":{\"uri\":\"reset-password\",\"methods\":[\"POST\"]},\"verification.notice\":{\"uri\":\"verify-email\",\"methods\":[\"GET\",\"HEAD\"]},\"verification.verify\":{\"uri\":\"verify-email\\/{id}\\/{hash}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\",\"hash\"]},\"verification.send\":{\"uri\":\"email\\/verification-notification\",\"methods\":[\"POST\"]},\"password.confirm\":{\"uri\":\"confirm-password\",\"methods\":[\"GET\",\"HEAD\"]},\"password.update\":{\"uri\":\"password\",\"methods\":[\"PUT\"]},\"logout\":{\"uri\":\"logout\",\"methods\":[\"POST\"]}});</script>        <script type=\"module\" >\n    import RefreshRuntime from 'http://[::1]:5173/@react-refresh'\n    RefreshRuntime.injectIntoGlobalHook(window)\n    window.$RefreshReg$ = () => {}\n    window.$RefreshSig$ = () => (type) => type\n    window.__vite_plugin_react_preamble_installed__ = true\n</script>        <script type=\"module\" src=\"http://[::1]:5173/@vite/client\" data-navigate-track=\"reload\"></script><script type=\"module\" src=\"http://[::1]:5173/resources/js/app.jsx\" data-navigate-track=\"reload\"></script><script type=\"module\" src=\"http://[::1]:5173/resources/js/Pages/Exhibition.jsx\" data-navigate-track=\"reload\"></script>            </head>\n    <body class=\"font-sans antialiased\">\n        <div id=\"app\" data-page=\"{&quot;component&quot;:&quot;Exhibition&quot;,&quot;props&quot;:[],&quot;url&quot;:&quot;\\/api\\/exhibition&quot;,&quot;version&quot;:&quot;&quot;}\"></div>    </body>\n</html>\n"
-      tags:
-        - Endpoints
-      security: []
-  '/api/my-work/{id_id}':
-    get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
-      description: ''
-      parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            text/plain:
-              schema:
-                type: string
-                example: "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        \n\n        <title inertia>Chimwemwe-Luwanda</title>\n\n        <!-- Fonts -->\n        <link rel=\"preconnect\" href=\"https://fonts.bunny.net\">\n        <link href=\"https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap\" rel=\"stylesheet\" />\n\n        <!-- Scripts -->\n        <script type=\"text/javascript\">Object.assign(Ziggy.routes,{\"filament.exports.download\":{\"uri\":\"filament\\/exports\\/{export}\\/download\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"export\"],\"bindings\":{\"export\":\"id\"}},\"filament.imports.failed-rows.download\":{\"uri\":\"filament\\/imports\\/{import}\\/failed-rows\\/download\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"import\"],\"bindings\":{\"import\":\"id\"}},\"filament.live.auth.login\":{\"uri\":\"live\\/login\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.auth.logout\":{\"uri\":\"live\\/logout\",\"methods\":[\"POST\"]},\"filament.live.auth.profile\":{\"uri\":\"live\\/profile\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.pages.dashboard\":{\"uri\":\"live\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.index\":{\"uri\":\"live\\/permissions\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.create\":{\"uri\":\"live\\/permissions\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.edit\":{\"uri\":\"live\\/permissions\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.permissions.view\":{\"uri\":\"live\\/permissions\\/{record}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.roles.index\":{\"uri\":\"live\\/roles\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.roles.create\":{\"uri\":\"live\\/roles\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.roles.edit\":{\"uri\":\"live\\/roles\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.roles.view\":{\"uri\":\"live\\/roles\\/{record}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.categories.index\":{\"uri\":\"live\\/categories\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.categories.create\":{\"uri\":\"live\\/categories\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.categories.edit\":{\"uri\":\"live\\/categories\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.events.index\":{\"uri\":\"live\\/events\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.events.create\":{\"uri\":\"live\\/events\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.events.edit\":{\"uri\":\"live\\/events\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.event-tickets.index\":{\"uri\":\"live\\/event-tickets\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.event-tickets.create\":{\"uri\":\"live\\/event-tickets\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.event-tickets.edit\":{\"uri\":\"live\\/event-tickets\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.items.index\":{\"uri\":\"live\\/items\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.items.create\":{\"uri\":\"live\\/items\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.items.edit\":{\"uri\":\"live\\/items\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.ticket-types.index\":{\"uri\":\"live\\/ticket-types\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.ticket-types.create\":{\"uri\":\"live\\/ticket-types\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.ticket-types.edit\":{\"uri\":\"live\\/ticket-types\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.users.index\":{\"uri\":\"live\\/users\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.users.create\":{\"uri\":\"live\\/users\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.users.edit\":{\"uri\":\"live\\/users\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"sanctum.csrf-cookie\":{\"uri\":\"sanctum\\/csrf-cookie\",\"methods\":[\"GET\",\"HEAD\"]},\"livewire.update\":{\"uri\":\"livewire\\/update\",\"methods\":[\"POST\"]},\"livewire.upload-file\":{\"uri\":\"livewire\\/upload-file\",\"methods\":[\"POST\"]},\"livewire.preview-file\":{\"uri\":\"livewire\\/preview-file\\/{filename}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"filename\"]},\"home\":{\"uri\":\"\\/\",\"methods\":[\"GET\",\"HEAD\"]},\"about\":{\"uri\":\"about\",\"methods\":[\"GET\",\"HEAD\"]},\"gallery.index\":{\"uri\":\"gallery\",\"methods\":[\"GET\",\"HEAD\"]},\"exhibition.index\":{\"uri\":\"exhibition\",\"methods\":[\"GET\",\"HEAD\"]},\"items.show\":{\"uri\":\"my-work\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"],\"bindings\":{\"id\":\"id\"}},\"dashboard\":{\"uri\":\"dashboard\",\"methods\":[\"GET\",\"HEAD\"]},\"events.index\":{\"uri\":\"events\",\"methods\":[\"GET\",\"HEAD\"]},\"events.show\":{\"uri\":\"events\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"changu-webhook\":{\"uri\":\"changu-webhook\",\"methods\":[\"GET\",\"HEAD\"]},\"changu.callback\":{\"uri\":\"changu-callback\",\"methods\":[\"GET\",\"HEAD\"]},\"wishlist.store\":{\"uri\":\"wishlist\",\"methods\":[\"POST\"]},\"profile.edit\":{\"uri\":\"profile\",\"methods\":[\"GET\",\"HEAD\"]},\"profile.update\":{\"uri\":\"profile\",\"methods\":[\"PATCH\"]},\"profile.destroy\":{\"uri\":\"profile\",\"methods\":[\"DELETE\"]},\"events.store\":{\"uri\":\"events\",\"methods\":[\"POST\"]},\"events.update\":{\"uri\":\"events\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"events.destroy\":{\"uri\":\"events\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"ticket-types.index\":{\"uri\":\"ticket-types\",\"methods\":[\"GET\",\"HEAD\"]},\"ticket-types.show\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"ticket-types.store\":{\"uri\":\"ticket-types\",\"methods\":[\"POST\"]},\"ticket-types.update\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"ticket-types.destroy\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"tickets.index\":{\"uri\":\"events\\/{eventId}\\/tickets\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"eventId\"]},\"tickets.show\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"tickets.store\":{\"uri\":\"tickets\",\"methods\":[\"POST\"]},\"tickets.update\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"tickets.destroy\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"register\":{\"uri\":\"register\",\"methods\":[\"GET\",\"HEAD\"]},\"login\":{\"uri\":\"login\",\"methods\":[\"GET\",\"HEAD\"]},\"password.request\":{\"uri\":\"forgot-password\",\"methods\":[\"GET\",\"HEAD\"]},\"password.email\":{\"uri\":\"forgot-password\",\"methods\":[\"POST\"]},\"password.reset\":{\"uri\":\"reset-password\\/{token}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"token\"]},\"password.store\":{\"uri\":\"reset-password\",\"methods\":[\"POST\"]},\"verification.notice\":{\"uri\":\"verify-email\",\"methods\":[\"GET\",\"HEAD\"]},\"verification.verify\":{\"uri\":\"verify-email\\/{id}\\/{hash}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\",\"hash\"]},\"verification.send\":{\"uri\":\"email\\/verification-notification\",\"methods\":[\"POST\"]},\"password.confirm\":{\"uri\":\"confirm-password\",\"methods\":[\"GET\",\"HEAD\"]},\"password.update\":{\"uri\":\"password\",\"methods\":[\"PUT\"]},\"logout\":{\"uri\":\"logout\",\"methods\":[\"POST\"]}});</script>        <script type=\"module\" >\n    import RefreshRuntime from 'http://[::1]:5173/@react-refresh'\n    RefreshRuntime.injectIntoGlobalHook(window)\n    window.$RefreshReg$ = () => {}\n    window.$RefreshSig$ = () => (type) => type\n    window.__vite_plugin_react_preamble_installed__ = true\n</script>        <script type=\"module\" src=\"http://[::1]:5173/@vite/client\" data-navigate-track=\"reload\"></script><script type=\"module\" src=\"http://[::1]:5173/resources/js/app.jsx\" data-navigate-track=\"reload\"></script><script type=\"module\" src=\"http://[::1]:5173/resources/js/Pages/Items/show/Items.jsx\" data-navigate-track=\"reload\"></script>            </head>\n    <body class=\"font-sans antialiased\">\n        <div id=\"app\" data-page=\"{&quot;component&quot;:&quot;Items\\/show\\/Items&quot;,&quot;props&quot;:{&quot;id&quot;:{&quot;data&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;Saulos Chilima&quot;,&quot;description&quot;:&quot;&lt;p&gt;&lt;strong&gt;Claus Saulos Chilima&lt;\\/strong&gt; was a prominent Malawian politician and economist born on &lt;em style=\\&quot;text-decoration: underline;\\&quot;&gt;February 12, 1973.&lt;\\/em&gt; He has served as the Vice President of Malawi since June 2014 till mid 2024&lt;\\/p&gt;&quot;,&quot;clean_description&quot;:&quot;Claus Saulos Chilima was a prominent Malawian politician and economist born on February 12, 1973. He has served as the Vice President of Malawi since June 2014 till mid 2024&quot;,&quot;price&quot;:&quot;MWK 100.00&quot;,&quot;pretty_price&quot;:&quot;100&quot;,&quot;created_at&quot;:&quot;3 weeks ago&quot;,&quot;dimensions&quot;:&quot;5 X 5 Inches&quot;,&quot;avatar&quot;:&quot;http:\\/\\/localhost:8000\\/storage\\/1\\/01J43DH3S4W2V2JBVYJCWWMEVH.jpg&quot;,&quot;category&quot;:&quot;Pencil Sketches&quot;}},&quot;pub_key&quot;:null,&quot;return_url&quot;:&quot;http:\\/\\/localhost:8000&quot;},&quot;url&quot;:&quot;\\/api\\/my-work\\/1&quot;,&quot;version&quot;:&quot;&quot;}\"></div>    </body>\n</html>\n"
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id_id
-        description: 'The ID of the id.'
-        example: 1
-        required: true
-        schema:
-          type: integer
   /api/wishlist:
     get:
       summary: ''
@@ -113,7 +87,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - Wishlists
       security: []
   /api/dashboard:
     get:
@@ -136,6 +110,96 @@ paths:
                     example: Unauthenticated.
       tags:
         - Endpoints
+      security: []
+  '/api/events/{eventId}/tickets':
+    get:
+      summary: 'List all tickets for an event'
+      operationId: listAllTicketsForAnEvent
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Event Tickets'
+      security: []
+    parameters:
+      -
+        in: path
+        name: eventId
+        description: ''
+        example: 12
+        required: true
+        schema:
+          type: integer
+  '/api/tickets/{id}':
+    get:
+      summary: 'Show a specific ticket'
+      operationId: showASpecificTicket
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Event Tickets'
+      security: []
+    put:
+      summary: 'Update an existing ticket'
+      operationId: updateAnExistingTicket
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Event Tickets'
+      security: []
+    delete:
+      summary: 'Delete a ticket'
+      operationId: deleteATicket
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Event Tickets'
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the ticket.'
+        example: id
+        required: true
+        schema:
+          type: string
+  /api/tickets:
+    post:
+      summary: ''
+      operationId: postApiTickets
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Event Tickets'
       security: []
   /api/events:
     get:
@@ -249,7 +313,7 @@ paths:
                         type: integer
                         example: 0
       tags:
-        - Endpoints
+        - Events
       security: []
     post:
       summary: 'Store a new event'
@@ -258,7 +322,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - Events
       security: []
   '/api/events/{id}':
     get:
@@ -274,13 +338,13 @@ paths:
               schema:
                 type: object
                 example:
-                  message: 'No query results for model [App\Models\Event] 4'
+                  message: 'No query results for model [App\Models\Event] 15'
                 properties:
                   message:
                     type: string
-                    example: 'No query results for model [App\Models\Event] 4'
+                    example: 'No query results for model [App\Models\Event] 15'
       tags:
-        - Endpoints
+        - Events
       security: []
     put:
       summary: 'Update an existing event'
@@ -289,38 +353,60 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - Events
       security: []
     delete:
       summary: 'Delete an event'
       operationId: deleteAnEvent
       description: ''
       parameters: []
-      responses:
-        200:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: 'Event deleted successfully'
-                properties:
-                  message:
-                    type: string
-                    example: 'Event deleted successfully'
+      responses: {  }
       tags:
-        - Endpoints
+        - Events
       security: []
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the event.'
-        example: 4
+        example: 15
         required: true
         schema:
           type: integer
+  /api/exhibition:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        \n\n        <title inertia>Chimwemwe-Luwanda</title>\n\n        <!-- Fonts -->\n        <link rel=\"preconnect\" href=\"https://fonts.bunny.net\">\n        <link href=\"https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap\" rel=\"stylesheet\" />\n\n        <!-- Scripts -->\n        <script type=\"text/javascript\">Object.assign(Ziggy.routes,{\"filament.exports.download\":{\"uri\":\"filament\\/exports\\/{export}\\/download\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"export\"],\"bindings\":{\"export\":\"id\"}},\"filament.imports.failed-rows.download\":{\"uri\":\"filament\\/imports\\/{import}\\/failed-rows\\/download\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"import\"],\"bindings\":{\"import\":\"id\"}},\"filament.live.auth.login\":{\"uri\":\"live\\/login\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.auth.logout\":{\"uri\":\"live\\/logout\",\"methods\":[\"POST\"]},\"filament.live.auth.profile\":{\"uri\":\"live\\/profile\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.pages.dashboard\":{\"uri\":\"live\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.index\":{\"uri\":\"live\\/permissions\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.create\":{\"uri\":\"live\\/permissions\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.edit\":{\"uri\":\"live\\/permissions\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.permissions.view\":{\"uri\":\"live\\/permissions\\/{record}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.roles.index\":{\"uri\":\"live\\/roles\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.roles.create\":{\"uri\":\"live\\/roles\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.roles.edit\":{\"uri\":\"live\\/roles\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.roles.view\":{\"uri\":\"live\\/roles\\/{record}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.categories.index\":{\"uri\":\"live\\/categories\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.categories.create\":{\"uri\":\"live\\/categories\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.categories.edit\":{\"uri\":\"live\\/categories\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.events.index\":{\"uri\":\"live\\/events\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.events.create\":{\"uri\":\"live\\/events\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.events.edit\":{\"uri\":\"live\\/events\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.event-tickets.index\":{\"uri\":\"live\\/event-tickets\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.event-tickets.create\":{\"uri\":\"live\\/event-tickets\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.event-tickets.edit\":{\"uri\":\"live\\/event-tickets\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.items.index\":{\"uri\":\"live\\/items\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.items.create\":{\"uri\":\"live\\/items\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.items.edit\":{\"uri\":\"live\\/items\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.ticket-types.index\":{\"uri\":\"live\\/ticket-types\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.ticket-types.create\":{\"uri\":\"live\\/ticket-types\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.ticket-types.edit\":{\"uri\":\"live\\/ticket-types\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.users.index\":{\"uri\":\"live\\/users\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.users.create\":{\"uri\":\"live\\/users\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.users.edit\":{\"uri\":\"live\\/users\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"sanctum.csrf-cookie\":{\"uri\":\"sanctum\\/csrf-cookie\",\"methods\":[\"GET\",\"HEAD\"]},\"livewire.update\":{\"uri\":\"livewire\\/update\",\"methods\":[\"POST\"]},\"livewire.upload-file\":{\"uri\":\"livewire\\/upload-file\",\"methods\":[\"POST\"]},\"livewire.preview-file\":{\"uri\":\"livewire\\/preview-file\\/{filename}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"filename\"]},\"home\":{\"uri\":\"\\/\",\"methods\":[\"GET\",\"HEAD\"]},\"about\":{\"uri\":\"about\",\"methods\":[\"GET\",\"HEAD\"]},\"gallery.index\":{\"uri\":\"gallery\",\"methods\":[\"GET\",\"HEAD\"]},\"exhibition.index\":{\"uri\":\"exhibition\",\"methods\":[\"GET\",\"HEAD\"]},\"items.show\":{\"uri\":\"my-work\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"],\"bindings\":{\"id\":\"id\"}},\"dashboard\":{\"uri\":\"dashboard\",\"methods\":[\"GET\",\"HEAD\"]},\"events.index\":{\"uri\":\"events\",\"methods\":[\"GET\",\"HEAD\"]},\"events.show\":{\"uri\":\"events\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"changu-webhook\":{\"uri\":\"changu-webhook\",\"methods\":[\"GET\",\"HEAD\"]},\"changu.callback\":{\"uri\":\"changu-callback\",\"methods\":[\"GET\",\"HEAD\"]},\"wishlist.store\":{\"uri\":\"wishlist\",\"methods\":[\"POST\"]},\"profile.edit\":{\"uri\":\"profile\",\"methods\":[\"GET\",\"HEAD\"]},\"profile.update\":{\"uri\":\"profile\",\"methods\":[\"PATCH\"]},\"profile.destroy\":{\"uri\":\"profile\",\"methods\":[\"DELETE\"]},\"events.store\":{\"uri\":\"events\",\"methods\":[\"POST\"]},\"events.update\":{\"uri\":\"events\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"events.destroy\":{\"uri\":\"events\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"ticket-types.index\":{\"uri\":\"ticket-types\",\"methods\":[\"GET\",\"HEAD\"]},\"ticket-types.show\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"ticket-types.store\":{\"uri\":\"ticket-types\",\"methods\":[\"POST\"]},\"ticket-types.update\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"ticket-types.destroy\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"tickets.index\":{\"uri\":\"events\\/{eventId}\\/tickets\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"eventId\"]},\"tickets.show\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"tickets.store\":{\"uri\":\"tickets\",\"methods\":[\"POST\"]},\"tickets.update\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"tickets.destroy\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"register\":{\"uri\":\"register\",\"methods\":[\"GET\",\"HEAD\"]},\"login\":{\"uri\":\"login\",\"methods\":[\"GET\",\"HEAD\"]},\"password.request\":{\"uri\":\"forgot-password\",\"methods\":[\"GET\",\"HEAD\"]},\"password.email\":{\"uri\":\"forgot-password\",\"methods\":[\"POST\"]},\"password.reset\":{\"uri\":\"reset-password\\/{token}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"token\"]},\"password.store\":{\"uri\":\"reset-password\",\"methods\":[\"POST\"]},\"verification.notice\":{\"uri\":\"verify-email\",\"methods\":[\"GET\",\"HEAD\"]},\"verification.verify\":{\"uri\":\"verify-email\\/{id}\\/{hash}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\",\"hash\"]},\"verification.send\":{\"uri\":\"email\\/verification-notification\",\"methods\":[\"POST\"]},\"password.confirm\":{\"uri\":\"confirm-password\",\"methods\":[\"GET\",\"HEAD\"]},\"password.update\":{\"uri\":\"password\",\"methods\":[\"PUT\"]},\"logout\":{\"uri\":\"logout\",\"methods\":[\"POST\"]}});</script>        <script type=\"module\" >\n    import RefreshRuntime from 'http://[::1]:5173/@react-refresh'\n    RefreshRuntime.injectIntoGlobalHook(window)\n    window.$RefreshReg$ = () => {}\n    window.$RefreshSig$ = () => (type) => type\n    window.__vite_plugin_react_preamble_installed__ = true\n</script>        <script type=\"module\" src=\"http://[::1]:5173/@vite/client\" data-navigate-track=\"reload\"></script><script type=\"module\" src=\"http://[::1]:5173/resources/js/app.jsx\" data-navigate-track=\"reload\"></script><script type=\"module\" src=\"http://[::1]:5173/resources/js/Pages/Exhibition.jsx\" data-navigate-track=\"reload\"></script>            </head>\n    <body class=\"font-sans antialiased\">\n        <div id=\"app\" data-page=\"{&quot;component&quot;:&quot;Exhibition&quot;,&quot;props&quot;:[],&quot;url&quot;:&quot;\\/api\\/exhibition&quot;,&quot;version&quot;:&quot;&quot;}\"></div>    </body>\n</html>\n"
+      tags:
+        - Exhibition
+      security: []
+  /api/gallery:
+    get:
+      summary: 'Display a listing of the resource.'
+      operationId: displayAListingOfTheResource
+      description: ''
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        \n\n        <title inertia>Chimwemwe-Luwanda</title>\n\n        <!-- Fonts -->\n        <link rel=\"preconnect\" href=\"https://fonts.bunny.net\">\n        <link href=\"https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap\" rel=\"stylesheet\" />\n\n        <!-- Scripts -->\n        <script type=\"text/javascript\">Object.assign(Ziggy.routes,{\"filament.exports.download\":{\"uri\":\"filament\\/exports\\/{export}\\/download\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"export\"],\"bindings\":{\"export\":\"id\"}},\"filament.imports.failed-rows.download\":{\"uri\":\"filament\\/imports\\/{import}\\/failed-rows\\/download\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"import\"],\"bindings\":{\"import\":\"id\"}},\"filament.live.auth.login\":{\"uri\":\"live\\/login\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.auth.logout\":{\"uri\":\"live\\/logout\",\"methods\":[\"POST\"]},\"filament.live.auth.profile\":{\"uri\":\"live\\/profile\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.pages.dashboard\":{\"uri\":\"live\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.index\":{\"uri\":\"live\\/permissions\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.create\":{\"uri\":\"live\\/permissions\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.permissions.edit\":{\"uri\":\"live\\/permissions\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.permissions.view\":{\"uri\":\"live\\/permissions\\/{record}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.roles.index\":{\"uri\":\"live\\/roles\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.roles.create\":{\"uri\":\"live\\/roles\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.roles.edit\":{\"uri\":\"live\\/roles\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.roles.view\":{\"uri\":\"live\\/roles\\/{record}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.categories.index\":{\"uri\":\"live\\/categories\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.categories.create\":{\"uri\":\"live\\/categories\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.categories.edit\":{\"uri\":\"live\\/categories\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.events.index\":{\"uri\":\"live\\/events\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.events.create\":{\"uri\":\"live\\/events\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.events.edit\":{\"uri\":\"live\\/events\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.event-tickets.index\":{\"uri\":\"live\\/event-tickets\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.event-tickets.create\":{\"uri\":\"live\\/event-tickets\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.event-tickets.edit\":{\"uri\":\"live\\/event-tickets\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.items.index\":{\"uri\":\"live\\/items\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.items.create\":{\"uri\":\"live\\/items\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.items.edit\":{\"uri\":\"live\\/items\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.ticket-types.index\":{\"uri\":\"live\\/ticket-types\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.ticket-types.create\":{\"uri\":\"live\\/ticket-types\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.ticket-types.edit\":{\"uri\":\"live\\/ticket-types\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"filament.live.resources.users.index\":{\"uri\":\"live\\/users\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.users.create\":{\"uri\":\"live\\/users\\/create\",\"methods\":[\"GET\",\"HEAD\"]},\"filament.live.resources.users.edit\":{\"uri\":\"live\\/users\\/{record}\\/edit\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"record\"]},\"sanctum.csrf-cookie\":{\"uri\":\"sanctum\\/csrf-cookie\",\"methods\":[\"GET\",\"HEAD\"]},\"livewire.update\":{\"uri\":\"livewire\\/update\",\"methods\":[\"POST\"]},\"livewire.upload-file\":{\"uri\":\"livewire\\/upload-file\",\"methods\":[\"POST\"]},\"livewire.preview-file\":{\"uri\":\"livewire\\/preview-file\\/{filename}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"filename\"]},\"home\":{\"uri\":\"\\/\",\"methods\":[\"GET\",\"HEAD\"]},\"about\":{\"uri\":\"about\",\"methods\":[\"GET\",\"HEAD\"]},\"gallery.index\":{\"uri\":\"gallery\",\"methods\":[\"GET\",\"HEAD\"]},\"exhibition.index\":{\"uri\":\"exhibition\",\"methods\":[\"GET\",\"HEAD\"]},\"items.show\":{\"uri\":\"my-work\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"],\"bindings\":{\"id\":\"id\"}},\"dashboard\":{\"uri\":\"dashboard\",\"methods\":[\"GET\",\"HEAD\"]},\"events.index\":{\"uri\":\"events\",\"methods\":[\"GET\",\"HEAD\"]},\"events.show\":{\"uri\":\"events\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"changu-webhook\":{\"uri\":\"changu-webhook\",\"methods\":[\"GET\",\"HEAD\"]},\"changu.callback\":{\"uri\":\"changu-callback\",\"methods\":[\"GET\",\"HEAD\"]},\"wishlist.store\":{\"uri\":\"wishlist\",\"methods\":[\"POST\"]},\"profile.edit\":{\"uri\":\"profile\",\"methods\":[\"GET\",\"HEAD\"]},\"profile.update\":{\"uri\":\"profile\",\"methods\":[\"PATCH\"]},\"profile.destroy\":{\"uri\":\"profile\",\"methods\":[\"DELETE\"]},\"events.store\":{\"uri\":\"events\",\"methods\":[\"POST\"]},\"events.update\":{\"uri\":\"events\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"events.destroy\":{\"uri\":\"events\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"ticket-types.index\":{\"uri\":\"ticket-types\",\"methods\":[\"GET\",\"HEAD\"]},\"ticket-types.show\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"ticket-types.store\":{\"uri\":\"ticket-types\",\"methods\":[\"POST\"]},\"ticket-types.update\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"ticket-types.destroy\":{\"uri\":\"ticket-types\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"tickets.index\":{\"uri\":\"events\\/{eventId}\\/tickets\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"eventId\"]},\"tickets.show\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\"]},\"tickets.store\":{\"uri\":\"tickets\",\"methods\":[\"POST\"]},\"tickets.update\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"PUT\"],\"parameters\":[\"id\"]},\"tickets.destroy\":{\"uri\":\"tickets\\/{id}\",\"methods\":[\"DELETE\"],\"parameters\":[\"id\"]},\"register\":{\"uri\":\"register\",\"methods\":[\"GET\",\"HEAD\"]},\"login\":{\"uri\":\"login\",\"methods\":[\"GET\",\"HEAD\"]},\"password.request\":{\"uri\":\"forgot-password\",\"methods\":[\"GET\",\"HEAD\"]},\"password.email\":{\"uri\":\"forgot-password\",\"methods\":[\"POST\"]},\"password.reset\":{\"uri\":\"reset-password\\/{token}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"token\"]},\"password.store\":{\"uri\":\"reset-password\",\"methods\":[\"POST\"]},\"verification.notice\":{\"uri\":\"verify-email\",\"methods\":[\"GET\",\"HEAD\"]},\"verification.verify\":{\"uri\":\"verify-email\\/{id}\\/{hash}\",\"methods\":[\"GET\",\"HEAD\"],\"parameters\":[\"id\",\"hash\"]},\"verification.send\":{\"uri\":\"email\\/verification-notification\",\"methods\":[\"POST\"]},\"password.confirm\":{\"uri\":\"confirm-password\",\"methods\":[\"GET\",\"HEAD\"]},\"password.update\":{\"uri\":\"password\",\"methods\":[\"PUT\"]},\"logout\":{\"uri\":\"logout\",\"methods\":[\"POST\"]}});</script>        <script type=\"module\" >\n    import RefreshRuntime from 'http://[::1]:5173/@react-refresh'\n    RefreshRuntime.injectIntoGlobalHook(window)\n    window.$RefreshReg$ = () => {}\n    window.$RefreshSig$ = () => (type) => type\n    window.__vite_plugin_react_preamble_installed__ = true\n</script>        <script type=\"module\" src=\"http://[::1]:5173/@vite/client\" data-navigate-track=\"reload\"></script><script type=\"module\" src=\"http://[::1]:5173/resources/js/app.jsx\" data-navigate-track=\"reload\"></script><script type=\"module\" src=\"http://[::1]:5173/resources/js/Pages/Gallery.jsx\" data-navigate-track=\"reload\"></script>            </head>\n    <body class=\"font-sans antialiased\">\n        <div id=\"app\" data-page=\"{&quot;component&quot;:&quot;Gallery&quot;,&quot;props&quot;:{&quot;items&quot;:{&quot;data&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;Saulos Chilima&quot;,&quot;description&quot;:&quot;&lt;p&gt;&lt;strong&gt;Claus Saulos Chilima&lt;\\/strong&gt; was a prominent Malawian politician and economist born on &lt;em style=\\&quot;text-decoration: underline;\\&quot;&gt;February 12, 1973.&lt;\\/em&gt; He has served as the Vice President of Malawi since June 2014 till mid 2024&lt;\\/p&gt;&quot;,&quot;clean_description&quot;:&quot;Claus Saulos Chilima was a prominent Malawian politician and economist born on February 12, 1973. He has served as the Vice President of Malawi since June 2014 till mid 2024&quot;,&quot;price&quot;:&quot;MWK 100.00&quot;,&quot;pretty_price&quot;:&quot;100&quot;,&quot;created_at&quot;:&quot;3 weeks ago&quot;,&quot;dimensions&quot;:&quot;5 X 5 Inches&quot;,&quot;avatar&quot;:&quot;http:\\/\\/localhost:8000\\/storage\\/1\\/01J43DH3S4W2V2JBVYJCWWMEVH.jpg&quot;,&quot;category&quot;:&quot;Pencil Sketches&quot;}],&quot;links&quot;:{&quot;first&quot;:&quot;http:\\/\\/localhost:8000\\/api\\/gallery?page=1&quot;,&quot;last&quot;:&quot;http:\\/\\/localhost:8000\\/api\\/gallery?page=1&quot;,&quot;prev&quot;:null,&quot;next&quot;:null},&quot;meta&quot;:{&quot;current_page&quot;:1,&quot;from&quot;:1,&quot;last_page&quot;:1,&quot;links&quot;:[{&quot;url&quot;:null,&quot;label&quot;:&quot;&amp;laquo; Previous&quot;,&quot;active&quot;:false},{&quot;url&quot;:&quot;http:\\/\\/localhost:8000\\/api\\/gallery?page=1&quot;,&quot;label&quot;:&quot;1&quot;,&quot;active&quot;:true},{&quot;url&quot;:null,&quot;label&quot;:&quot;Next &amp;raquo;&quot;,&quot;active&quot;:false}],&quot;path&quot;:&quot;http:\\/\\/localhost:8000\\/api\\/gallery&quot;,&quot;per_page&quot;:20,&quot;to&quot;:1,&quot;total&quot;:1}}},&quot;url&quot;:&quot;\\/api\\/gallery&quot;,&quot;version&quot;:&quot;&quot;}\"></div>    </body>\n</html>\n"
+      tags:
+        - Gallery
+      security: []
   /api/changu-webhook:
     get:
       summary: ''
@@ -341,7 +427,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
+        - Payments
       security: []
   /api/changu-callback:
     get:
@@ -363,7 +449,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
+        - Payments
       security: []
   /api/profile:
     get:
@@ -385,7 +471,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
+        - Profile
       security: []
     delete:
       summary: "Delete the user's account."
@@ -394,7 +480,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - Profile
       requestBody:
         required: true
         content:
@@ -405,14 +491,14 @@ paths:
                 password:
                   type: string
                   description: ''
-                  example: voluptas
+                  example: est
               required:
                 - password
       security: []
   /api/ticket-types:
     get:
-      summary: 'Display a listing of the resource.'
-      operationId: displayAListingOfTheResource
+      summary: 'Display a listing of the ticket types.'
+      operationId: displayAListingOfTheTicketTypes
       description: ''
       parameters: []
       responses:
@@ -429,21 +515,21 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
+        - 'Ticket Types Management'
       security: []
     post:
-      summary: 'Store a newly created resource in storage.'
-      operationId: storeANewlyCreatedResourceInStorage
+      summary: 'Store a newly created ticket type in storage.'
+      operationId: storeANewlyCreatedTicketTypeInStorage
       description: ''
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Ticket Types Management'
       security: []
   '/api/ticket-types/{id}':
     get:
-      summary: 'Display the specified resource.'
-      operationId: displayTheSpecifiedResource
+      summary: 'Display the specified ticket type.'
+      operationId: displayTheSpecifiedTicketType
       description: ''
       parameters: []
       responses:
@@ -460,126 +546,63 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
+        - 'Ticket Types Management'
       security: []
     put:
-      summary: 'Update the specified resource in storage.'
-      operationId: updateTheSpecifiedResourceInStorage
+      summary: 'Update the specified ticket type in storage.'
+      operationId: updateTheSpecifiedTicketTypeInStorage
       description: ''
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Ticket Types Management'
       security: []
     delete:
-      summary: 'Remove the specified resource from storage.'
-      operationId: removeTheSpecifiedResourceFromStorage
+      summary: 'Remove the specified ticket type from storage.'
+      operationId: removeTheSpecifiedTicketTypeFromStorage
       description: ''
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'Ticket Types Management'
       security: []
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the ticket type.'
-        example: 4
+        example: 7
         required: true
         schema:
           type: integer
-  '/api/events/{eventId}/tickets':
-    get:
-      summary: 'List all tickets for an event'
-      operationId: listAllTicketsForAnEvent
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: eventId
-        description: ''
-        example: 13
-        required: true
-        schema:
-          type: integer
-  '/api/tickets/{id}':
-    get:
-      summary: 'Show a specific ticket'
-      operationId: showASpecificTicket
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - Endpoints
-      security: []
-    put:
-      summary: 'Update an existing ticket'
-      operationId: updateAnExistingTicket
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    delete:
-      summary: 'Delete a ticket'
-      operationId: deleteATicket
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the ticket.'
-        example: incidunt
-        required: true
-        schema:
-          type: string
-  /api/tickets:
-    post:
-      summary: ''
-      operationId: postApiTickets
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - Endpoints
-      security: []
 tags:
   -
+    name: 'Artworks and Creations Management'
+    description: "\nAPI endpoints for managing artworks and creations (items)."
+  -
     name: Endpoints
+    description: ''
+  -
+    name: 'Event Tickets'
+    description: ''
+  -
+    name: Events
+    description: ''
+  -
+    name: Exhibition
+    description: ''
+  -
+    name: Gallery
+    description: ''
+  -
+    name: Payments
+    description: ''
+  -
+    name: Profile
+    description: ''
+  -
+    name: 'Ticket Types Management'
+    description: "\nAPI endpoints for managing ticket types."
+  -
+    name: Wishlists
     description: ''

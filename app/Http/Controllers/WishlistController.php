@@ -6,6 +6,12 @@ use App\Models\Wishlist;
 use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
 
+
+/**
+ * @group Wishlists
+ * @package App\Http\Controllers
+ */
+
 class WishlistController extends Controller
 {
     /**

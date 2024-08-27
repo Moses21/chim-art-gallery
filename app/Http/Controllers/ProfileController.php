@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 use Inertia\Response;
 
+/**
+ * @group Profile
+ * @package App\Http\Controllers
+ */
+
 class ProfileController extends Controller
 {
     /**
