@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 class RegisteredUsersPerMonth extends ChartWidget
 {
 
+   protected static ?string $pollingInterval = '10s';
 
    protected static ?string $heading = 'Users Registered Per Month';
 
