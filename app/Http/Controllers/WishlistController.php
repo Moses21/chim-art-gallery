@@ -27,26 +27,31 @@ class WishlistController extends Controller
 
     /**
      * Store a newly created resource in storage.
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(Request $request)
     {
-       $has_item =  Wishlist::query()
+        // Check if the item is already in the wishlist
+        $has_item =  Wishlist::query()
                     ->where('user_id', auth()->user()->id)
                     ->where('item_id', $request->item_id)
                     ->count();
 
-       if($has_item > 0){
-        return response()->json(['message' => 'Item already in your wishlist'], 409);
-       }
+        // Return a 409 Conflict response if the item is already in the wishlist
+        if($has_item > 0){
+            return response()->json(['message' => 'Item already in your wishlist'], 409);
+        }
 
-
-       $wishlist = Wishlist::create([
+        // Create a new wishlist item
+        $wishlist = Wishlist::create([
             'user_id' => auth()->user()->id,
             'item_id' => $request->item_id
         ]);
 
+        // Return a 201 Created response with the new wishlist item
         return response()->json($wishlist, 201);
-
     }
 
     /**

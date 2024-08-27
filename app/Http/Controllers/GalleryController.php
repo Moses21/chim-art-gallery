@@ -9,12 +9,20 @@ use App\Http\Resources\ItemCollection;
 class GalleryController extends Controller
 {
 
-public function index(){
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        // Get the latest items with their categories
+        // and paginate the results to 20 items per page
+        $items = Items::with('category')->latest()->paginate(20);
 
-    $items =    $items = Items::with('category')->latest()->paginate(20);
-
-    return inertia('Gallery',[
-        "items" => new ItemCollection($items),
-    ]);
-}
+        // Return an Inertia response with the items collection
+        return inertia('Gallery', [
+            'items' => new ItemCollection($items),
+        ]);
+    }
 }
