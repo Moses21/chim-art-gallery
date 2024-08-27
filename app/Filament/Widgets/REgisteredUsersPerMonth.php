@@ -11,10 +11,28 @@ class RegisteredUsersPerMonth extends ChartWidget
 
    protected static ?string $pollingInterval = '10s';
 
+
    protected static ?string $heading = 'Users Registered Per Month';
+
+//    protected  ?string $columnSpan = 'Full';
+
+
+
+   protected function getFilters(): ?array
+   {
+       return [
+           'today' => 'Today',
+           'week' => 'Last week',
+           'month' => 'Last month',
+           'year' => 'This year',
+       ];
+   }
+
 
     protected function getData(): array
     {
+        $activeFilter = $this->filter;
+
         $usersPerMonth = User::select(
             DB::raw("COUNT(*) as count"),
             DB::raw("DATE_FORMAT(created_at, '%Y-%m') as month")
@@ -34,6 +52,9 @@ class RegisteredUsersPerMonth extends ChartWidget
             'labels' => $usersPerMonth->keys(),
         ];
     }
+
+
+
 
     protected function getType(): string
     {

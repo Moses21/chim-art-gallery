@@ -45,10 +45,10 @@ class LivePanelProvider extends PanelProvider
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\StatsOverviewWidget::class,
+                 Widgets\StatsOverviewWidget::class,
                 RegisteredUsersPerMonth::class,
                 // Widgets\ActivityWidget::class,
-                Widgets\AccountWidget::class,
+                // Widgets\AccountWidget::class,
                 // Widgets\ProfileInformationWidget::class,
                 // Widgets\FilamentInfoWidget::class,
             ])
