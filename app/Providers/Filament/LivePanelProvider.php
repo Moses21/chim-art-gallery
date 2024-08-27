@@ -11,6 +11,7 @@ use Filament\Support\Colors\Color;
 use Filament\Http\Middleware\Authenticate;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
+use App\Filament\Widgets\RegisteredUsersPerMonth;
 use Symfony\Component\HttpKernel\Profiler\Profile;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
@@ -45,7 +46,7 @@ class LivePanelProvider extends PanelProvider
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
                 Widgets\StatsOverviewWidget::class,
-                Widgets\RegisteredUsersPerMonth::class,
+                RegisteredUsersPerMonth::class,
                 // Widgets\ActivityWidget::class,
                 Widgets\AccountWidget::class,
                 // Widgets\ProfileInformationWidget::class,

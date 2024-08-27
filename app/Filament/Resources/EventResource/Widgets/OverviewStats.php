@@ -5,8 +5,8 @@ namespace App\Filament\Resources\EventResource\Widgets;
 // namespace App\Filament\Widgets;
 
 use App\Models\User;
-use App\Models\Ticket;
 use App\Models\Event;
+use App\Models\EventTicket;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 
@@ -19,7 +19,7 @@ class OverviewStats extends BaseWidget
                 ->description('Registered Users')
                 ->color('primary'),
 
-            Stat::make('Total Tickets Sold', Ticket::count())
+            Stat::make('Total Tickets Sold', EventTicket::count())
                 ->description('All Tickets')
                 ->color('success'),
 
@@ -27,7 +27,7 @@ class OverviewStats extends BaseWidget
                 ->description('All Events')
                 ->color('info'),
 
-            Stat::make('Total Revenue', 'MWK ' . number_format(Ticket::sum('price')))
+            Stat::make('Total Revenue', 'MWK ' . number_format(EventTicket::sum('price')))
                 ->description('Revenue from Ticket Sales')
                 ->color('warning'),
         ];
