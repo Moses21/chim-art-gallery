@@ -1,0 +1,67 @@
+{
+  "hash": "e6744395",
+  "configHash": "9b557f39",
+  "lockfileHash": "9e42e86d",
+  "browserHash": "8b6e2583",
+  "optimized": {
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "117d7b9a",
+      "needsInterop": true
+    },
+    "@inertiajs/react": {
+      "src": "../../node_modules/@inertiajs/react/dist/index.esm.js",
+      "file": "@inertiajs_react.js",
+      "fileHash": "416f20c6",
+      "needsInterop": false
+    },
+    "laravel-vite-plugin/inertia-helpers": {
+      "src": "../../node_modules/laravel-vite-plugin/inertia-helpers/index.js",
+      "file": "laravel-vite-plugin_inertia-helpers.js",
+      "fileHash": "d5a3562c",
+      "needsInterop": false
+    },
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "514eb01e",
+      "needsInterop": true
+    },
+    "react-countup": {
+      "src": "../../node_modules/react-countup/build/index.js",
+      "file": "react-countup.js",
+      "fileHash": "ce0b9d63",
+      "needsInterop": true
+    },
+    "react-bootstrap-icons": {
+      "src": "../../node_modules/react-bootstrap-icons/dist/index.js",
+      "file": "react-bootstrap-icons.js",
+      "fileHash": "06b2fc90",
+      "needsInterop": false
+    },
+    "react-fast-marquee": {
+      "src": "../../node_modules/react-fast-marquee/dist/index.js",
+      "file": "react-fast-marquee.js",
+      "fileHash": "b316489f",
+      "needsInterop": true
+    },
+    "axios": {
+      "src": "../../node_modules/axios/index.js",
+      "file": "axios.js",
+      "fileHash": "e42dbd6c",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-65KY755N": {
+      "file": "chunk-65KY755N.js"
+    },
+    "chunk-MOBYBDLD": {
+      "file": "chunk-MOBYBDLD.js"
+    },
+    "chunk-V4OQ3NZ2": {
+      "file": "chunk-V4OQ3NZ2.js"
+    }
+  }
+}
