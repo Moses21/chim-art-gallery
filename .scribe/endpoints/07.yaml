@@ -1,0 +1,85 @@
+name: Profile
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/profile
+    metadata:
+      groupName: Profile
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Display the user's profile form."
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: api/profile
+    metadata:
+      groupName: Profile
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: "Delete the user's account."
+      description: |-
+        This method is invoked when the user submits the account deletion form.
+        It validates the request data, logs the user out, deletes the user's
+        account, and redirects the user back to the login page.
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      password:
+        name: password
+        description: ''
+        required: true
+        example: est
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
+    cleanBodyParameters:
+      password: est
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

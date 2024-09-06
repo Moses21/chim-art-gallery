@@ -1,0 +1,66 @@
+name: Exhibition
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/exhibition
+    metadata:
+      groupName: Exhibition
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Display a listing of the resource.'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |
+          <!DOCTYPE html>
+          <html lang="en">
+              <head>
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1">
+                  
+
+                  <title inertia>Chimwemwe-Luwanda</title>
+
+                  <!-- Fonts -->
+                  <link rel="preconnect" href="https://fonts.bunny.net">
+                  <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
+                  <!-- Scripts -->
+                  <script type="text/javascript">Object.assign(Ziggy.routes,{"filament.exports.download":{"uri":"filament\/exports\/{export}\/download","methods":["GET","HEAD"],"parameters":["export"],"bindings":{"export":"id"}},"filament.imports.failed-rows.download":{"uri":"filament\/imports\/{import}\/failed-rows\/download","methods":["GET","HEAD"],"parameters":["import"],"bindings":{"import":"id"}},"filament.live.auth.login":{"uri":"live\/login","methods":["GET","HEAD"]},"filament.live.auth.logout":{"uri":"live\/logout","methods":["POST"]},"filament.live.auth.profile":{"uri":"live\/profile","methods":["GET","HEAD"]},"filament.live.pages.dashboard":{"uri":"live","methods":["GET","HEAD"]},"filament.live.resources.permissions.index":{"uri":"live\/permissions","methods":["GET","HEAD"]},"filament.live.resources.permissions.create":{"uri":"live\/permissions\/create","methods":["GET","HEAD"]},"filament.live.resources.permissions.edit":{"uri":"live\/permissions\/{record}\/edit","methods":["GET","HEAD"],"parameters":["record"]},"filament.live.resources.permissions.view":{"uri":"live\/permissions\/{record}","methods":["GET","HEAD"],"parameters":["record"]},"filament.live.resources.roles.index":{"uri":"live\/roles","methods":["GET","HEAD"]},"filament.live.resources.roles.create":{"uri":"live\/roles\/create","methods":["GET","HEAD"]},"filament.live.resources.roles.edit":{"uri":"live\/roles\/{record}\/edit","methods":["GET","HEAD"],"parameters":["record"]},"filament.live.resources.roles.view":{"uri":"live\/roles\/{record}","methods":["GET","HEAD"],"parameters":["record"]},"filament.live.resources.categories.index":{"uri":"live\/categories","methods":["GET","HEAD"]},"filament.live.resources.categories.create":{"uri":"live\/categories\/create","methods":["GET","HEAD"]},"filament.live.resources.categories.edit":{"uri":"live\/categories\/{record}\/edit","methods":["GET","HEAD"],"parameters":["record"]},"filament.live.resources.events.index":{"uri":"live\/events","methods":["GET","HEAD"]},"filament.live.resources.events.create":{"uri":"live\/events\/create","methods":["GET","HEAD"]},"filament.live.resources.events.edit":{"uri":"live\/events\/{record}\/edit","methods":["GET","HEAD"],"parameters":["record"]},"filament.live.resources.event-tickets.index":{"uri":"live\/event-tickets","methods":["GET","HEAD"]},"filament.live.resources.event-tickets.create":{"uri":"live\/event-tickets\/create","methods":["GET","HEAD"]},"filament.live.resources.event-tickets.edit":{"uri":"live\/event-tickets\/{record}\/edit","methods":["GET","HEAD"],"parameters":["record"]},"filament.live.resources.items.index":{"uri":"live\/items","methods":["GET","HEAD"]},"filament.live.resources.items.create":{"uri":"live\/items\/create","methods":["GET","HEAD"]},"filament.live.resources.items.edit":{"uri":"live\/items\/{record}\/edit","methods":["GET","HEAD"],"parameters":["record"]},"filament.live.resources.ticket-types.index":{"uri":"live\/ticket-types","methods":["GET","HEAD"]},"filament.live.resources.ticket-types.create":{"uri":"live\/ticket-types\/create","methods":["GET","HEAD"]},"filament.live.resources.ticket-types.edit":{"uri":"live\/ticket-types\/{record}\/edit","methods":["GET","HEAD"],"parameters":["record"]},"filament.live.resources.users.index":{"uri":"live\/users","methods":["GET","HEAD"]},"filament.live.resources.users.create":{"uri":"live\/users\/create","methods":["GET","HEAD"]},"filament.live.resources.users.edit":{"uri":"live\/users\/{record}\/edit","methods":["GET","HEAD"],"parameters":["record"]},"sanctum.csrf-cookie":{"uri":"sanctum\/csrf-cookie","methods":["GET","HEAD"]},"livewire.update":{"uri":"livewire\/update","methods":["POST"]},"livewire.upload-file":{"uri":"livewire\/upload-file","methods":["POST"]},"livewire.preview-file":{"uri":"livewire\/preview-file\/{filename}","methods":["GET","HEAD"],"parameters":["filename"]},"home":{"uri":"\/","methods":["GET","HEAD"]},"about":{"uri":"about","methods":["GET","HEAD"]},"gallery.index":{"uri":"gallery","methods":["GET","HEAD"]},"exhibition.index":{"uri":"exhibition","methods":["GET","HEAD"]},"items.show":{"uri":"my-work\/{id}","methods":["GET","HEAD"],"parameters":["id"],"bindings":{"id":"id"}},"dashboard":{"uri":"dashboard","methods":["GET","HEAD"]},"events.index":{"uri":"events","methods":["GET","HEAD"]},"events.show":{"uri":"events\/{id}","methods":["GET","HEAD"],"parameters":["id"]},"changu-webhook":{"uri":"changu-webhook","methods":["GET","HEAD"]},"changu.callback":{"uri":"changu-callback","methods":["GET","HEAD"]},"wishlist.store":{"uri":"wishlist","methods":["POST"]},"profile.edit":{"uri":"profile","methods":["GET","HEAD"]},"profile.update":{"uri":"profile","methods":["PATCH"]},"profile.destroy":{"uri":"profile","methods":["DELETE"]},"events.store":{"uri":"events","methods":["POST"]},"events.update":{"uri":"events\/{id}","methods":["PUT"],"parameters":["id"]},"events.destroy":{"uri":"events\/{id}","methods":["DELETE"],"parameters":["id"]},"ticket-types.index":{"uri":"ticket-types","methods":["GET","HEAD"]},"ticket-types.show":{"uri":"ticket-types\/{id}","methods":["GET","HEAD"],"parameters":["id"]},"ticket-types.store":{"uri":"ticket-types","methods":["POST"]},"ticket-types.update":{"uri":"ticket-types\/{id}","methods":["PUT"],"parameters":["id"]},"ticket-types.destroy":{"uri":"ticket-types\/{id}","methods":["DELETE"],"parameters":["id"]},"tickets.index":{"uri":"events\/{eventId}\/tickets","methods":["GET","HEAD"],"parameters":["eventId"]},"tickets.show":{"uri":"tickets\/{id}","methods":["GET","HEAD"],"parameters":["id"]},"tickets.store":{"uri":"tickets","methods":["POST"]},"tickets.update":{"uri":"tickets\/{id}","methods":["PUT"],"parameters":["id"]},"tickets.destroy":{"uri":"tickets\/{id}","methods":["DELETE"],"parameters":["id"]},"register":{"uri":"register","methods":["GET","HEAD"]},"login":{"uri":"login","methods":["GET","HEAD"]},"password.request":{"uri":"forgot-password","methods":["GET","HEAD"]},"password.email":{"uri":"forgot-password","methods":["POST"]},"password.reset":{"uri":"reset-password\/{token}","methods":["GET","HEAD"],"parameters":["token"]},"password.store":{"uri":"reset-password","methods":["POST"]},"verification.notice":{"uri":"verify-email","methods":["GET","HEAD"]},"verification.verify":{"uri":"verify-email\/{id}\/{hash}","methods":["GET","HEAD"],"parameters":["id","hash"]},"verification.send":{"uri":"email\/verification-notification","methods":["POST"]},"password.confirm":{"uri":"confirm-password","methods":["GET","HEAD"]},"password.update":{"uri":"password","methods":["PUT"]},"logout":{"uri":"logout","methods":["POST"]}});</script>        <script type="module" >
+              import RefreshRuntime from 'http://[::1]:5173/@react-refresh'
+              RefreshRuntime.injectIntoGlobalHook(window)
+              window.$RefreshReg$ = () => {}
+              window.$RefreshSig$ = () => (type) => type
+              window.__vite_plugin_react_preamble_installed__ = true
+          </script>        <script type="module" src="http://[::1]:5173/@vite/client" data-navigate-track="reload"></script><script type="module" src="http://[::1]:5173/resources/js/app.jsx" data-navigate-track="reload"></script><script type="module" src="http://[::1]:5173/resources/js/Pages/Exhibition.jsx" data-navigate-track="reload"></script>            </head>
+              <body class="font-sans antialiased">
+                  <div id="app" data-page="{&quot;component&quot;:&quot;Exhibition&quot;,&quot;props&quot;:[],&quot;url&quot;:&quot;\/api\/exhibition&quot;,&quot;version&quot;:&quot;&quot;}"></div>    </body>
+          </html>
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
